@@ -1,11 +1,8 @@
 [build]
-  command = "echo Functions only deploy"
-  publish = "dist"
-
-[functions]
-  directory = "netlify/functions"
+  command = "echo Static web-build deploy"
+  publish = "web-build"
 
 [[redirects]]
-  from = "/api/bridge/properties"
-  to = "/.netlify/functions/bridge-properties"
+  from = "/*"
+  to = "/index.html"
   status = 200
